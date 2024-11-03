@@ -27,10 +27,10 @@ return new class extends Migration
             $table->string('direccion');
             $table->string('bienes_servicios');
             /* Relacion */
-            $table->unsignedBigInteger('personal_id')->nullable();
-            $table->foreign('personal_id')
+            $table->unsignedBigInteger('personals_id')->nullable();
+            $table->foreign('personals_id')
             ->references('id')
-            ->on('personal')
+            ->on('personals')
             ->onDelete('set null')
             ->onUpdate('cascade');
 
