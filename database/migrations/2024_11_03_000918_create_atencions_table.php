@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('atencions', function (Blueprint $table) {
             $table->id();
 
+            $table->string('cite');
             $table->string('cargo');
             $table->string('lugar');
             $table->string('red');
