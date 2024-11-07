@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Baja extends Model
+class Rasso extends Model
 {
     use HasFactory;
 
     protected $guarded  = [];
 
     public function personal() : BelongsTo {
-        return $this->belongsTo(Personal::class, 'personals_id');
+        return $this->belongsTo(Personal::class);
     }
 }

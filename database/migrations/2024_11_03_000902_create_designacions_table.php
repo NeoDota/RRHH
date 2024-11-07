@@ -14,19 +14,20 @@ return new class extends Migration
         Schema::create('designacions', function (Blueprint $table) {
             $table->id();
 
+            /* Datos del Memo */
+            $table->integer('numero');
             $table->string('cite');
-            $table->string('cargo');
-            $table->string('lugar');
-            $table->string('red');
-            $table->string('observacion');
             $table->string('fecha_entrega');
-            $table->string('Estado');
+            /* Herramientas */
+            $table->string('observacion');
+            $table->string('estado')->default('No entregado');
+            $table->string('color');
             /* Copias */
-            $table->string('copia');
-            $table->string('habilitacion');
-            $table->string('file');
-            $table->string('direccion');
-            $table->string('bienes_servicios');
+            $table->boolean('copia')->default(0);
+            $table->boolean('habilitacion')->default(0);
+            $table->boolean('file')->default(0);
+            $table->boolean('direccion')->default(0);
+            $table->boolean('bienes')->default(0);
             /* Relacion */
             $table->unsignedBigInteger('personals_id')->nullable();
             $table->foreign('personals_id')

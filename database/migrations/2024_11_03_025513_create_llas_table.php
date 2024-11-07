@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transferencias', function (Blueprint $table) {
+        Schema::create('llas', function (Blueprint $table) {
             $table->id();
 
             /* Datos del Memo */
@@ -45,6 +45,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transferencias');
+        Schema::dropIfExists('llas');
     }
 };
